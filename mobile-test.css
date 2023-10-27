@@ -1,0 +1,180 @@
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+ background-color: red;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding: 0 20px; 
+  height: 50px; 
+  display: flex;
+}
+
+#brand {
+  font-weight: bold;
+  font-size: 18px;
+  font-size: 31px;
+  font-weight: bold;
+}
+
+#brand a {
+  color: #ffffff;
+  font-family: 'Oswald', sans-serif;
+}
+
+#brand a:hover {
+  color: #F49384;
+  transition: 0.5s;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  font-family: 'Questrial', sans-serif;
+}
+
+ ul a {
+  color: #ffffff;
+} 
+
+
+ul a:hover {
+  color: #F49384;
+  transition: 0.5s;
+}
+
+nav li {
+  justify-content: space-around;
+}
+
+
+
+
+#hamburger-icon {
+  display: none;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#hamburger-icon div{
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+
+
+
+
+
+
+
+
+.mobile-menu {
+  display: flex;
+  position: absolute;
+  top: 0;
+  font-family: 'Oswald', sans-serif;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  background: black;
+  transition: .5s;
+}
+
+.open .mobile-menu {
+  opacity: 1;
+}
+
+.mobile-links{
+  margin-top: 170px;
+  text-align: center;
+}
+
+.mobile-menu li {
+  font-size: 30px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.mobile-menu a {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+hr {
+  width: 200px;
+  border: 1px solid #D1B258;
+  margin-top: 8px;
+}
+
+.burger {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  header nav {
+    display: none;
+  }
+
+  header {
+    display: block;
+  }
+
+  #brand {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
+

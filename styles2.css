@@ -1,0 +1,777 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: #fff;
+}
+
+
+/* HEADER */
+
+header{
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+#brand {
+  font-size: 25px;
+  font-family: 'Playfair Display', serif;
+}
+
+.menu-links {
+  display: flex;
+} 
+
+
+/* SOCIAL ICONS NEAR HEADER */
+
+.social-container {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 30px;
+  margin-top: -40px;
+  overflow: hidden;
+}
+
+.social-header {
+  display: flex;
+  flex-direction: column;
+  /* padding-left: 40px; */
+}
+
+svg {
+  fill: #ffffff;
+  width: 30px;
+  height: 30px;
+}
+
+svg:hover {
+  fill: #D1B258;
+  transition: 0.5s;
+}
+
+
+
+/* MAIN BODY */
+
+.main-image-container {
+  overflow: hidden;
+  width: 80%;
+  height: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -80px;
+}
+
+.main-image-container img {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  width: 100%;
+  height: auto;
+}
+
+.main-front-page {
+  display: block;
+  text-align: center;
+}
+
+.main-front-page h1, h2, button, iframe {
+  margin-top: 70px;
+}
+
+.main-front-page h1 {
+  font-size: 4em;
+  color: #a3956d;
+}
+
+h2 {
+  font-size: 2em;
+  color: #a3956d;
+}
+
+
+/* BUTTONS */
+
+button {
+  background-color: black;
+  color:  #a3956d;
+  border: 1px solid  #a3956d;
+  width: 231px;
+  height: 90px;
+  transition: 0.5s;
+  cursor: pointer;
+  font-family: 'Noticia Text', serif;
+}
+
+button:hover {
+  background-color: #a3956d;
+  color: black;
+}
+
+#shout-button {
+  font-family: 'Noticia Text', serif;
+  background-color:  #a3956d;
+  color: black;
+  font-style: italic;
+}
+
+#shout-button:hover {
+  background-color: #DCC8A4;
+}
+
+
+/* SOCIAL CONTAINER FOOTER */
+
+.social-container-footer {
+  display: flex;
+  justify-content: center;
+  margin-top:  50px;
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+.social-footer {
+  display: flex;
+}
+
+.social-footer svg {
+  margin: 5px;
+  width: 42px;
+  height: 42px;
+}
+
+hr {
+  display: none;
+  width: 200px;
+  border: 1px solid #D1B258;
+  margin-top: 8px;
+}
+
+
+/* BIO */
+
+.bio-container {
+  display: flex;
+  padding: 0 15em;
+}
+
+.left-column {
+  flex: 1;
+  margin-top: -130px;
+}
+
+.left-column h2 {
+  color: #D1B258;
+  font-family: "DIN Next Rounded LT W01 Light";
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.left-column p {
+  font-family: "DIN Next Rounded LT W01 Light";
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.right-column {
+  flex: 1;
+}
+
+/* #bio-photo-deskop {
+  display: block;
+} */
+
+.right-column img {
+  width: 100%;
+  height: auto;
+}
+
+.right-column p {
+  /* display: flex;
+  justify-content: flex-end; */
+  text-align: right;
+  color: darkgray;
+  font-style: italic;
+}
+
+#bio-photo-mobile {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+/* MUSIC */
+
+.music-column {
+  margin-top: -80px;
+  padding: 0 15em;
+}
+
+.music-column h2 {
+  color: #D1B258;
+  font-family: "DIN Next Rounded LT W01 Light";
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.music-column img {
+  width: 500px;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.music-column p {
+  font-family: "DIN Next Rounded LT W01 Light";
+  font-size: 18px;
+  line-height: 25px;
+}
+
+/* PROJECTS */
+
+.music-column h3 {
+  color: #D1B258;
+  font-family: "DIN Next Rounded LT W01 Light";
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+#reggae-title {
+  padding-top: 60px;
+  margin-bottom: -40px;
+}
+
+/* SHOWS */
+
+.shows-column {
+  margin-top: -80px;
+  padding: 0 15em;
+}
+
+.shows-column p {
+  font-family: "DIN Next Rounded LT W01 Light";
+  font-size: 20px;
+  line-height: 35px;
+}
+
+.shows-column h2 {
+  color: #D1B258;
+  font-family: "DIN Next Rounded LT W01 Light";
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+.shows-column img {
+  width: 100%;
+  min-width: 400px;
+  height: auto;
+}
+
+/* CONTACT PAGE */
+
+.contact-heads h2 {
+  color: #D1B258;
+  font-family: "DIN Next Rounded LT W01 Light";
+  font-size: 40px;
+}
+
+.contact-heads h3 {
+  color: #D1B258;
+  font-family: "DIN Next Rounded LT W01 Light";
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.contact-page {
+  display: block;
+  padding: 0 15em;
+  text-align: center;
+  margin-top: -120px;
+}
+
+.contact-page-mobile {
+  display: none;
+}
+
+.contact-heads {
+  text-align: left;
+}
+
+.contact-row {
+  display: flex;
+}
+
+.contact-form, .contact-image, .social-contact {
+  padding-right: 20px;
+}
+
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-image {
+  flex: 2;
+}
+
+.social-contact {
+  flex: 1;
+  text-align: left;
+}
+
+.contact-image img {
+  width: 100%;
+  min-width: 450px;
+  height: auto;
+}
+
+#contact-mobile {
+  display: none;
+}
+
+#contact-desktop {
+  display: block;
+}
+
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  height: auto;
+}
+
+.contact-form input {
+  margin-bottom: 10px;
+  height: 40px;
+  background-color: #B2B2B2;
+  min-width: 265px;
+}
+
+.contact-form textarea {
+  background-color: #B2B2B2;
+  height:90%;
+}
+
+#contact-button {
+  margin: 0;
+  padding: 0;
+  height: 35px;
+  width: 100%;
+  font-family: 'Noticia Text', serif;
+  background-color:  #a3956d;
+  color: black;
+  font-style: italic;
+  cursor: pointer;
+}
+
+#contact-button:hover {
+  background-color: #DCC8A4;
+}
+
+.contact-form p {
+  padding-top: 170px;
+  font-style: italic;
+}
+
+.social-contact p {
+  font-size: 25px;
+}
+
+.bottom-row {
+  display: flex;
+}
+
+.submit-left, .submit-right {
+  flex: 1;
+  text-align: left;
+  font-style: italic;
+}
+
+.submit-center {
+  flex: 2;
+  text-align: right;
+  font-style: italic;
+  color: darkgray;
+}
+
+.social-contact a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "DIN Next Rounded LT W01 Light";
+}
+
+.social-contact svg {
+  margin-bottom: -10px;
+  padding-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 940px) {
+  header {
+    display: block;
+    text-align: center;
+  }
+
+  .social-header {
+    flex-direction: row;
+  }
+
+  .social-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    padding-bottom: 100px;
+    overflow: hidden;
+    margin-left: 34px;
+  }
+
+  .social-header svg {
+    padding-right: 10px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.menu li {
+  list-style-type: none;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: 40px 15px;
+  font-size: 14px;
+  line-height: 1;
+  transition: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: light;
+}
+
+.menu li a:hover {
+  color: #D1B258;
+  transition: 0.5s;
+}
+
+#current-page-link {
+  color: #D1B258;
+}
+
+.hamburger {
+  position: relative;
+  width: 30px;
+  height: 3px;
+  background: #fff;
+  cursor: pointer;
+  z-index: 2;
+  transition: 0.3s;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  right: 0;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.hamburger:before {
+  top: -10px;
+  width: 30px;
+}
+
+.hamburger:after {
+  top: 10px;
+  width: 30px;
+}
+
+.toggle-menu {
+  position: absolute;
+  width: 30px;
+  height: 100%;
+  z-index: 3;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.hamburger,
+.toggle-menu {
+  display: none;
+}
+
+.navigation input:checked ~ .hamburger {
+  background: transparent;
+  position: fixed;
+}
+
+.navigation input:checked ~ .hamburger:before {
+  top: 0;
+  transform: rotate(-45deg);
+  width: 20px;
+}
+
+.navigation input:checked ~ .hamburger:after {
+  top: 0;
+  transform: rotate(45deg);
+  width: 20px;
+}
+
+.navigation input:checked ~ .menu {
+  opacity: 1;
+  box-shadow: -20px 0 40px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 140px;
+  }
+
+  .navigation {
+    margin-top: 30px;
+  }
+
+  .social-container {
+    display: none;
+  }
+
+  #brand {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #brand h1 {
+    font-size: 33px;
+  }
+
+  .hamburger,
+  .toggle-menu {
+    display: block;
+  }
+
+  .menu-links {
+    margin-top: 80px;
+    flex-direction: column;
+  }
+
+  .menu {
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background: black;
+    width: 100%;
+    height: 100%;
+    padding-top: 65px;
+    opacity: 0;
+  }
+
+  .menu li {
+    width: 100%;
+  }
+
+  .menu li a,
+  .menu li a:hover {
+    padding: 10px;
+    font-size: 24px;
+  }
+
+  iframe {
+    width: 80%;
+    height: auto;
+  }
+
+  .main-front-page h1 {
+    font-size: 2em;
+  }
+
+  .main-front-page h2 {
+    padding: 0 10px;
+    font-size: 1.5em;
+  }
+
+  hr {
+    display: block;
+  }
+
+  .menu-links li a {
+    font-size: 16px;
+  }
+
+  /* BIO */
+
+  .bio-container {
+    flex-direction: column;
+    padding: 0 10px;
+    margin-top: -50px;
+  }
+
+  #bio-photo-mobile {
+    display: block;
+  }
+
+  #bio-photo-deskop {
+    display: none;
+    width: 20px;
+  }
+
+  .right-column img:first-child {
+    display: none;
+  }
+
+  /* MUSIC */
+
+
+
+  /* PROJECTS */
+
+  .music-column {
+    padding: 0 10px;
+    margin-top: -180px;
+  }
+
+  .music-column img {
+    width: 90%;
+    height: auto;
+  }
+
+  .music-column h3 {
+    font-size: 1.5em;
+  }
+
+  /* SHOW */
+
+  .shows-column {
+    padding: 0 10px;
+    margin-top: -180px;
+  }
+
+  .shows-column h2 {
+    font-size: 2em;
+  }
+
+  .shows-column p{
+    font-size: 16px;
+  }
+
+  /* CONTACT */
+
+  .contact-page {
+    display: none;
+  }
+
+  .contact-page-mobile {
+    display: block;
+    text-align: center;
+    margin-top: -180px;
+    padding: 0 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contact-mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  #contact-desktop {
+    display: none;
+  }
+
+  .contact-page-mobile p {
+    padding-bottom: 10px;
+  }
+
+  .contact-heads p {
+    color: darkgray;
+    font-style: italic;
+    text-align: right;
+  }
+
+  .contact-page-mobile h3 {
+    font-size: 1.5em;
+  }
+
+  #mobile-textarea {
+    height: 140px;
+  }
+
+  #contact-p {
+    margin-top: -160px;
+  }
+}
+
+
+
