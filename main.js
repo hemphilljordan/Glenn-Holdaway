@@ -41,38 +41,6 @@ function sendEmail() {
 
 //FOR MOBILE MENU //
 
-// function stopScroll() {
-//   const frontPage =   document.querySelector('.main-front-page')
-
-//   if (frontPage.style.position !== 'fixed'){
-//     frontPage.style.position = 'fixed'
-//   } else if (frontPage.style.position === 'fixed' ){
-//   frontPage.style.position = 'static'
-//   }
-// }
-
-// function stopScrollShows() {
-//   const frontPage =   document.querySelector('.shows-column')
-
-//   if (frontPage.style.position !== 'fixed'){
-//     frontPage.style.position = 'fixed'
-//   } else if (frontPage.style.position === 'fixed' ){
-//   frontPage.style.position = 'static'
-//   }
-// }
-
-
-// function stopScrollProjects() {
-//   const frontPage =   document.querySelector('.music-column')
-
-//   if (frontPage.style.position !== 'fixed'){
-//     frontPage.style.position = 'fixed'
-//   } else if (frontPage.style.position === 'fixed' ){
-//   frontPage.style.position = 'static'
-//   }
-// }
-
-
 function stopScroll(page) {
   const frontPage =   document.querySelector(`.${page}`)
 
@@ -81,9 +49,22 @@ function stopScroll(page) {
   } else if (frontPage.style.position === 'fixed' ){
   frontPage.style.position = 'static'
   }
+
+  const menuPage = document.querySelector('.menu')
+
+  if (menuPage.style.display !== 'flex'){
+    menuPage.style.display = 'flex'
+  } else if (menuPage.style.display === 'flex' ){
+  menuPage.style.display = 'none'
+  }
 }
 
 
 
+
+
+function openWebsiteInNewTab(url) {
+  window.open(url, '_blank');
+}
 
 
