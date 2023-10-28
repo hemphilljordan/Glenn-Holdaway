@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <!-- iYLbSmz6EZc, oG_IgYSbrfs, oG_IgYSbrfs -->
+
+
+ <!-- Include the YouTube IFrame API script -->
+<script src="https://www.youtube.com/iframe_api"></script>
+
+<!-- HTML elements for embedding YouTube videos -->
+<div class="video-container" id="player1"></div>
+<div class="video-container" id="player2"></div>
+<div class="video-container" id="player3"></div>
+
+<script>
+  // Array to store all the YouTube players
+  var players = [];
+
+  // Initialize the YouTube API and create the players
+  function onYouTubeIframeAPIReady() {
+    var videoIds = ['iYLbSmz6EZc', 'oG_IgYSbrfs', 'xhgHSELjjcA'];
+
+    for (var i = 0; i < videoIds.length; i++) {
+      createPlayer('player' + (i + 1), videoIds[i]);
+    }
+  }
+
+  // Function to create a YouTube player
+  function createPlayer(containerId, videoId) {
+    players.push(
+      new YT.Player(containerId, {
+        height: '315',
+        width: '560',
+        videoId: videoId,
+        events: {
+          'onStateChange': onPlayerStateChange,
+        },
+      })
+    );
+  }
+
+  // Function to handle video state changes
+  function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.PLAYING) {
+      // Pause all other videos when one starts playing
+      for (var i = 0; i < players.length; i++) {
+        if (players[i].getPlayerState() === YT.PlayerState.PLAYING && players[i] !== event.target) {
+          players[i].pauseVideo();
+        }
+      }
+    }
+  }
+</script>
+ 
+
+</body>
+</html>

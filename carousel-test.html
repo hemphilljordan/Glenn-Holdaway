@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noticia+Text&family=Playfair+Display&family=Source+Code+Pro&family=Yeseva+One&display=swap" rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/643121b5d2cc9943eff9b59054cc29ba?family=DIN+Next+Rounded+LT+W01+Light" rel="stylesheet">
+  <link href="https://db.onlinewebfonts.com/c/4c0277bcba75a3570694a90365e79f29?family=Droid+Serif+W01+Regular" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="carousel-test-style.css">
+  <title>Glenn Holdaway - Official Website</title>
+  
+</head>
+<body>
+
+
+
+
+  <div class="main-front-page">
+
+
+    <h2>GALLERY</h2>
+
+
+  <div class="carousel-container" id="carousel-container">
+    <div class="carousel">
+        <span class="close" onclick="closeCarousel()">&times;</span>
+        <img id="carousel-image" src="" alt="Carousel Image">
+        <span class="nav-btn left" onclick="prevImage()">&lt;</span>
+        <span class="nav-btn right" onclick="nextImage()">&gt;</span>
+    </div>
+</div>
+
+
+
+  
+
+  </div>
+
+  <script>
+
+
+
+
+
+    let currentIndex = 0;
+  
+  const imageArray = [
+      "images/image-1.png",
+      "images/image-2.png",
+      "images/image-3.png",
+      "images/image-4.png",
+      "images/image-5.png",
+      "images/image-6.png"
+  ];
+  
+  function openCarousel(imageSrc) {
+      const carouselContainer = document.getElementById('carousel-container');
+      const carouselImage = document.getElementById('carousel-image');
+  
+      currentIndex = imageArray.indexOf(imageSrc);
+      updateCarouselImage(carouselImage);
+      carouselContainer.style.display = 'block';
+  }
+  
+  function closeCarousel() {
+      const carouselContainer = document.getElementById('carousel-container');
+      carouselContainer.style.display = 'none';
+  }
+  
+  function updateCarouselImage(carouselImage) {
+      carouselImage.src = imageArray[currentIndex];
+  }
+  
+  function prevImage() {
+      currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+      updateCarouselImage(document.getElementById('carousel-image'));
+  }
+  
+  function nextImage() {
+      currentIndex = (currentIndex + 1) % imageArray.length;
+      updateCarouselImage(document.getElementById('carousel-image'));
+  }
+  </script>
+  </body>
+  </html>

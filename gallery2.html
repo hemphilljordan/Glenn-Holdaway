@@ -56,6 +56,73 @@
 
 
   <div class="main-front-page">
+
+
+    <h2>GALLERY</h2>
+    <div class="gallery">
+        <div class="gallery_item gallery_item--1">
+            <a href="#" class="gallery_link">
+                <img src="images/image-1.png" class="gallery_image" onclick="openCarousel('images/image-1.png')" alt="Image 1">
+                <div class="gallery_overlay">
+                    <span>Text...</span>
+                </div>
+            </a>
+        </div>
+        <div class="gallery_item gallery_item--2">
+          <a href="#" class="gallery_link">
+              <img src="images/image-2.png" class="gallery_image" onclick="openCarousel('images/image-2.png')" alt="Image 2">
+              <div class="gallery_overlay">
+                  <span>Text...</span>
+              </div>
+          </a>
+      </div>
+      <div class="gallery_item gallery_item--3">
+        <a href="#" class="gallery_link">
+            <img src="images/image-3.png" class="gallery_image" onclick="openCarousel('images/image-3.png')" alt="Image 3">
+            <div class="gallery_overlay">
+                <span>Text...</span>
+            </div>
+        </a>
+    </div>
+    <div class="gallery_item gallery_item--4">
+      <a href="#" class="gallery_link">
+          <img src="images/image-4.png" class="gallery_image" onclick="openCarousel('images/image-4.png')" alt="Image 4">
+          <div class="gallery_overlay">
+              <span>Text...</span>
+          </div>
+      </a>
+  </div>
+  <div class="gallery_item gallery_item--5">
+    <a href="#" class="gallery_link">
+        <img src="images/image-5.png" class="gallery_image" onclick="openCarousel('images/image-5.png')" alt="Image 5">
+        <div class="gallery_overlay">
+            <span>Text...</span>
+        </div>
+    </a>
+</div>
+<div class="gallery_item gallery_item--6">
+  <a href="#" class="gallery_link">
+      <img src="images/image-6.png" class="gallery_image" onclick="openCarousel('images/image-1.png')" alt="Image 1">
+      <div class="gallery_overlay">
+          <span>Text...</span>
+      </div>
+  </a>
+</div>
+    </div>
+
+  </div>
+
+  <div class="carousel-container" id="carousel-container">
+    <div class="carousel">
+        <span class="close" onclick="closeCarousel()">&times;</span>
+        <img id="carousel-image" src="" alt="Carousel Image">
+        <span class="nav-btn left" onclick="prevImage()">&lt;</span>
+        <span class="nav-btn right" onclick="nextImage()">&gt;</span>
+    </div>
+</div>
+
+
+
   
     <div class="social-container-footer">
       <div class="social-footer">
@@ -71,7 +138,46 @@
     </div>
   </div>
 
- 
+  <script>
+    let currentIndex = 0;
+  
+  const imageArray = [
+      "images/image-1.png",
+      "images/image-2.png",
+      "images/image-3.png",
+      "images/image-4.png",
+      "images/image-5.png",
+      "images/image-6.png"
+  ];
+  
+  function openCarousel(imageSrc) {
+      const carouselContainer = document.getElementById('carousel-container');
+      const carouselImage = document.getElementById('carousel-image');
+  
+      currentIndex = imageArray.indexOf(imageSrc);
+      updateCarouselImage(carouselImage);
+      carouselContainer.style.display = 'block';
+  }
+  
+  function closeCarousel() {
+      const carouselContainer = document.getElementById('carousel-container');
+      carouselContainer.style.display = 'none';
+  }
+  
+  function updateCarouselImage(carouselImage) {
+      carouselImage.src = imageArray[currentIndex];
+  }
+  
+  function prevImage() {
+      currentIndex = (currentIndex - 1 + imageArray.length) % imageArray.length;
+      updateCarouselImage(document.getElementById('carousel-image'));
+  }
+  
+  function nextImage() {
+      currentIndex = (currentIndex + 1) % imageArray.length;
+      updateCarouselImage(document.getElementById('carousel-image'));
+  }
+  </script>
 <script src="main.js"></script>
   </body>
   </html>
