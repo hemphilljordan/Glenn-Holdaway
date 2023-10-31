@@ -178,7 +178,7 @@ function stopScroll(page) {
 
  // Initialize the YouTube API and create the players
  function onYouTubeIframeAPIReady() {
-   var videoIds = ['iYLbSmz6EZc', 'oG_IgYSbrfs', 'xhgHSELjjcA', 'YOaX-pEvZ88', 'ief7eig0Q6U', '4sihCZyBmMg', 'mbN-TApHCLI', 'c2O0ARxQYn0', '6ohsupKVYKc', 'ND0N5v4HaEA', 'fmQ2RYZy5LI', 'yyy7BbCQZi8', 'jVEslHNh9E0', 'yQqiEm5DQ3E', '8nZaKRBGlYo', '-MFTJG_CjI4', 'kai79Kp_fvk', '6VISv1hhxuI', 'OFjurgqLgHQ', 'sv5R1UGEqT8', '87gOUvkp0G4', 'tW7REYzY-bU', '1olDiHlL8SI'];
+   var videoIds = ['iYLbSmz6EZc', 'oG_IgYSbrfs', 'xhgHSELjjcA'];
 
    for (var i = 0; i < videoIds.length; i++) {
      createPlayer('player' + (i + 1), videoIds[i]);
@@ -216,115 +216,77 @@ function stopScroll(page) {
 
  //   MUSIC OWL CAROUSEL
 
- function owlFullScreen(startPosition) {
+ let carouselNum = 3
+
+ $('.owl-carousel').owlCarousel({
+      loop:true,
+      margin:10,
+      nav:true,
+      responsive:{
+          0:{
+              items:1
+          },
+          600:{
+              items:3
+          },
+          1000:{
+              items: carouselNum
+          }
+      },
+      navText: ["<img src='prev-button.png'>", "<img src='next-button.png'>"]
+  })
+
+
+
+ function owlFullScreen() {
   const owlContainer = document.querySelector('.owl-carousel-container')
 
   owlContainer.style.position = 'fixed'
   owlContainer.style.top = '0'
   owlContainer.style.left = '0'
-  owlContainer.style.bottom = '0'
-  owlContainer.style.right = '0'
   owlContainer.style.background = 'black'
 
+  carouselNum = 1
 
-  document.querySelector('.music-close-button').style.display = 'block'
-  document.querySelector('.owl-carousel').style.marginTop = '80px'
-
-
-
- 
-
-  const theImages = document.querySelectorAll('.music-carousel-images')
-  const theVideos = document.querySelectorAll('.theVideos')
-
-  theImages.forEach(image => {
-    image.style.display = 'none'
-  })
-
-  theVideos.forEach(video => {
-    video.style.display = 'block'
-  })
-
-  const playButton = document.querySelectorAll('.play-button-music')
-  playButton.forEach(button => {
-    button.style.display = 'none'
-  })
-
-
-  $('.owl-carousel').trigger('destroy.owl.carousel'); // Destroy the current carousel instance
   $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      startPosition: startPosition,
-      responsive: {
-          0: {
-              items: 1
-          },
-          600: {
-              items: 3
-          },
-          1000: {
-              items: 1 // Change to 1 item at 1000px and above
-          }
-      },
-      navText: ["<img src='prev-button.png'>", "<img src='next-button.png'>"]
-  });
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items: carouselNum
+        }
+    },
+    navText: ["<img src='prev-button.png'>", "<img src='next-button.png'>"]
+})
  
  }
 
 
+//  function updateOwlCarouselResponsive(items) {
+//   $('.owl-carousel').owlCarousel({
+//       loop: true,
+//       margin: 10,
+//       nav: true,
+//       responsive: {
+//           0: {
+//               items: 1
+//           },
+//           600: {
+//               items: 3
+//           },
+//           1000: {
+//               items: items // Set the 'items' parameter here
+//           }
+//       },
+//       navText: ["<img src='prev-button.png'>", "<img src='next-button.png'>"]
+//   });
+// }
 
- function regularMusicCarousel() {
-  const owlContainer = document.querySelector('.owl-carousel-container')
-
-  owlContainer.style.position = 'relative'
-  owlContainer.style.top = ''
-  owlContainer.style.left = ''
-  owlContainer.style.bottom = ''
-  owlContainer.style.right = ''
-  owlContainer.style.background = 'none'
-
-
-  document.querySelector('.music-close-button').style.display = 'none'
-  document.querySelector('.owl-carousel').style.marginTop = ''
-
-
-
-  const theImages = document.querySelectorAll('.music-carousel-images')
-  const theVideos = document.querySelectorAll('.theVideos')
-
-  theImages.forEach(image => {
-    image.style.display = 'block'
-  })
-
-  theVideos.forEach(video => {
-    video.style.display = 'none'
-  })
-
-  const playButton = document.querySelectorAll('.play-button-music')
-  playButton.forEach(button => {
-    button.style.display = 'block'
-  })
-
-
-  $('.owl-carousel').trigger('destroy.owl.carousel'); // Destroy the current carousel instance
-  $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      responsive: {
-          0: {
-              items: 1
-          },
-          600: {
-              items: 3
-          },
-          1000: {
-              items: 3 
-          }
-      },
-      navText: ["<img src='prev-button.png'>", "<img src='next-button.png'>"]
-  });
- 
- }
+// updateOwlCarouselResponsive(3)
