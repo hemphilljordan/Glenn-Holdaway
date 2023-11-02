@@ -218,7 +218,7 @@ h2 {
   height: 24px;
 }
 
-.play-button {
+#play-button {
   height: 50px;
   width: auto;
 }
@@ -1178,16 +1178,43 @@ hr {
   }
 
   .video-carousel {
-    margin-top: -400px;
-    margin-bottom: -100px;
+    width: 80%;
+    height: auto;
+    margin-top: -260px;
+    margin-bottom: 90px;
+  }
+
+
+  /* these next 2 are attempts at mobile swipes */
+  .video-carousel ul {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  /*main page carousel trys */
+  .music-overlay2 {
+    display: none;
+  }
+  
+
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+
+  #play-button {
+    width: auto;
+    height: 50px;
   }
 
   .carousel-button.prev {
     left: -4rem;
+    display: none;
   }
   
   .carousel-button.next {
     right: -4rem;
+    display: none;
   }
 
   .overlay {
@@ -1221,7 +1248,13 @@ hr {
 
   /* MUSIC */
 
-
+  .owl-nav .owl-prev {
+    opacity: 0;
+  }
+  
+  .owl-nav .owl-next {
+    opacity: 0;
+  }
 
   /* PROJECTS */
 

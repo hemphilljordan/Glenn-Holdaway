@@ -9,6 +9,13 @@
   <link href="https://db.onlinewebfonts.com/c/643121b5d2cc9943eff9b59054cc29ba?family=DIN+Next+Rounded+LT+W01+Light" rel="stylesheet">
   <link href="https://db.onlinewebfonts.com/c/4c0277bcba75a3570694a90365e79f29?family=Droid+Serif+W01+Regular" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles2.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Glenn Holdaway - Official Website</title>
   
 </head>
@@ -61,14 +68,14 @@
 
     <!-- HOPEFULLY THE OFFICIAL CAROUSEL THING -->
 
-
-    <div class="video-carousel" data-carousel>
-      <button class="carousel-button prev" data-carousel-button="prev"><img src="prev-button.png"></button>
-      <button class="carousel-button next" data-carousel-button="next"><img src="next-button.png"></button>
+  
+    <div id="blue-bar" class="video-carousel" data-carousel>
+      <button class="carousel-button prev button-alert" data-carousel-button="prev"><img src="prev-button.png"></button>
+      <button class="carousel-button next button-alert" data-carousel-button="next"><img src="next-button.png"></button>
       <ul data-slides>
         <li class="slide" data-active>
           <div class="overlay">
-          <img class="play-button" src="White Play button Png.png">
+          <img id="play-button" src="White Play button Png.png">
           </div>
           <img class="theImages" src="https://img.youtube.com/vi/iYLbSmz6EZc/maxresdefault.jpg" alt="Nature Image #1" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player1"></div>
@@ -76,7 +83,7 @@
         </li>
         <li class="slide">
           <div class="overlay">
-            <img class="play-button" src="White Play button Png.png">
+            <img id="play-button" src="White Play button Png.png">
             </div>
           <img class="theImages" src="https://img.youtube.com/vi/oG_IgYSbrfs/maxresdefault.jpg" alt="Nature Image #2" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player2"></div>
@@ -84,7 +91,7 @@
         </li>
         <li class="slide">
           <div class="overlay">
-            <img class="play-button" src="White Play button Png.png">
+            <img id="play-button" src="White Play button Png.png">
             </div>
           <img class="theImages" src="https://img.youtube.com/vi/xhgHSELjjcA/maxresdefault.jpg" alt="Nature Image #3" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player3"></div>
@@ -92,7 +99,7 @@
         </li>
         <li class="slide">
           <div class="overlay">
-            <img class="play-button" src="White Play button Png.png">
+            <img id="play-button" src="White Play button Png.png">
             </div>
           <img class="theImages" src="https://img.youtube.com/vi/YOaX-pEvZ88/hqdefault.jpg" alt="Nature Image #4" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player4"></div>
@@ -100,7 +107,7 @@
         </li>
         <li class="slide">
           <div class="overlay">
-            <img class="play-button" src="White Play button Png.png">
+            <img id="play-button" src="White Play button Png.png">
             </div>
           <img class="theImages" src="https://img.youtube.com/vi/ief7eig0Q6U/hqdefault.jpg" alt="Nature Image #3" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player5"></div>
@@ -108,7 +115,7 @@
         </li>
         <li class="slide">
           <div class="overlay">
-            <img class="play-button" src="White Play button Png.png">
+            <img id="play-button" src="White Play button Png.png">
             </div>
           <img class="theImages" src="https://img.youtube.com/vi/4sihCZyBmMg/hqdefault.jpg" alt="Nature Image #3" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player6"></div>
@@ -116,7 +123,7 @@
         </li>
         <li class="slide">
           <div class="overlay">
-            <img class="play-button" src="White Play button Png.png">
+            <img id="play-button" src="White Play button Png.png">
             </div>
           <img class="theImages" src="https://img.youtube.com/vi/mbN-TApHCLI/hqdefault.jpg" alt="Nature Image #3" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player7"></div>
@@ -124,7 +131,7 @@
         </li>
         <li class="slide">
           <div class="overlay">
-            <img class="play-button" src="White Play button Png.png">
+            <img id="play-button" src="White Play button Png.png">
             </div>
           <img class="theImages" src="https://img.youtube.com/vi/c2O0ARxQYn0/hqdefault.jpg" alt="Nature Image #3" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player8"></div>
@@ -132,7 +139,7 @@
         </li>
         <li class="slide">
           <div class="overlay">
-            <img class="play-button" src="White Play button Png.png">
+            <img id="play-button" src="White Play button Png.png">
             </div>
           <img class="theImages" src="https://img.youtube.com/vi/6ohsupKVYKc/hqdefault.jpg" alt="Nature Image #3" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player9"></div>
@@ -140,7 +147,7 @@
         </li>
         <li class="slide">
           <div class="overlay">
-            <img class="play-button" src="White Play button Png.png">
+            <imgids="play-button" src="White Play button Png.png">
             </div>
           <img class="theImages" src="https://img.youtube.com/vi/ND0N5v4HaEA/hqdefault.jpg" alt="Nature Image #3" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player10"></div>
@@ -148,7 +155,7 @@
         </li>
         <li class="slide">
           <div class="overlay">
-            <img class="play-button" src="White Play button Png.png">
+            <img id="play-button" src="White Play button Png.png">
             </div>
           <img class="theImages" src="https://img.youtube.com/vi/fmQ2RYZy5LI/hqdefault.jpg" alt="Nature Image #3" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player11"></div>
@@ -156,7 +163,7 @@
         </li>
         <li class="slide">
           <div class="overlay">
-            <img class="play-button" src="White Play button Png.png">
+            <img id="play-button" src="White Play button Png.png">
             </div>
           <img class="theImages" src="https://img.youtube.com/vi/yyy7BbCQZi8/hqdefault.jpg" alt="Nature Image #3" onclick="fullCarousel()">
           <div class="video-container theVideos" id="player12"></div>
@@ -170,8 +177,126 @@
       </svg>
       </div>
     </div>
+ 
 
 
+
+
+
+    <!-- //TRYING THE OWL CAROUSEL TO GET THE MOBILE CAROUSEL TO SWIPE// -->
+    <!-- <div class="owl-carousel-container">
+      <div class="owl-carousel owl-theme">
+        <div class="item2" onclick="owlFullScreen(0)">
+          <div class="music-overlay2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/iYLbSmz6EZc/maxresdefault.jpg">
+          <div class="video-container theVideos" id="player1">
+          </div>
+          <p>The Scenic Route</p>
+        </div>
+        <div class="item2" onclick="owlFullScreen(1)">
+          <div class="music-overlay2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/oG_IgYSbrfs/maxresdefault.jpg">
+          <div class="video-container theVideos" id="player2">
+          </div>
+          <p>Glenn Holdaway with Wailing Souls: "Firehouse Rock"</p>
+        </div>
+        <div class="item2" onclick="owlFullScreen(2)">
+          <div class="music-overlay2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/xhgHSELjjcA/maxresdefault.jpg">
+          <div class="video-container theVideos" id="player3">
+          </div>
+          <p>Reggaematical (feat.Quinn Carson)</p>
+        </div>
+        <div class="item2" onclick="owlFullScreen(3)">
+          <div class="music-overla2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/YOaX-pEvZ88/hqdefault.jpg">
+          <div class="video-container theVideos" id="player4">
+          </div>
+          <p>Glenn Holdaway Trumpet Solo with For Peace Band "Sounds of His Majesty" 2019</p>
+        </div>
+        <div class="item2" onclick="owlFullScreen(4)">
+          <div class="music-overlay2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/ief7eig0Q6U/hqdefault.jpg">
+          <div class="video-container theVideos" id="player5">
+          </div>
+          <p>Glenn Holdaway with SOJA at Closer to the Sun 2019</p>
+        </div>
+        <div class="item2" onclick="owlFullScreen(5)">
+          <div class="music-overlay2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/4sihCZyBmMg/hqdefault.jpg">
+          <div class="video-container theVideos" id="player6">
+          </div>
+          <p>Glenn Holdaway with Don Carlos & Soul Syndicate "Laser Beam" 2018</p>
+        </div>
+        <div class="item2" onclick="owlFullScreen(6)">
+          <div class="music-overlay2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/mbN-TApHCLI/hqdefault.jpg">
+          <div class="video-container theVideos" id="player7">
+          </div>
+          <p>Glenn Holdaway Plunger Solo with Fully Fullwood 2017</p>
+        </div>
+        <div class="item2" onclick="owlFullScreen(7)">
+          <div class="music-overlay2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/c2O0ARxQYn0/hqdefault.jpg">
+          <div class="video-container theVideos" id="player8">
+          </div>
+          <p>Glenn Holdaway Trumpet Solo with Don Carlos 2019</p>
+        </div>
+        <div class="item2" onclick="owlFullScreen(8)">
+          <div class="music-overlay2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/6ohsupKVYKc/hqdefault.jpg">
+          <div class="video-container theVideos" id="player9">
+          </div>
+          <p>Glenn Holdaway with Josh Heinrichs & SkillinJah "High Grade" 2019</p>
+        </div>
+        <div class="item2" onclick="owlFullScreen(9)">
+          <div class="music-overlay2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/ND0N5v4HaEA/hqdefault.jpg">
+          <div class="video-container theVideos" id="player10">
+          </div>
+          <p>Glenn Holdaway trumpet solo with Stick Figure "Let the Music Play" 2019</p>
+        </div>
+        <div class="item2" onclick="owlFullScreen(10)">
+          <div class="music-overlay2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/fmQ2RYZy5LI/hqdefault.jpgg">
+          <div class="video-container theVideos" id="player11">
+          </div>
+          <p>Glenn Holdaway with Don Carlos & Slightly Stoopid: "Laser Beam" 2019</p>
+        </div>
+        <div class="item2" onclick="owlFullScreen(11)">
+          <div class="music-overlay2">
+            <img class="play-button-music2" src="White Play button Png.png">
+          </div>
+          <img class="music-carousel-images" src="https://img.youtube.com/vi/yyy7BbCQZi8/hqdefault.jpg">
+          <div class="video-container theVideos" id="player12">
+          </div>
+          <p>Don Carlos & The Soul Syndicate Band Interview</p>
+        </div>
+
+</div>
+        </div> -->
    
 
 
@@ -196,9 +321,39 @@
         <a href="https://www.instagram.com/glennholdaway_/"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="100%" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:serif="http://www.serif.com/" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M256,0c141.29,0 256,114.71 256,256c0,141.29 -114.71,256 -256,256c-141.29,0 -256,-114.71 -256,-256c0,-141.29 114.71,-256 256,-256Zm0,96c-43.453,0 -48.902,0.184 -65.968,0.963c-17.03,0.777 -28.661,3.482 -38.839,7.437c-10.521,4.089 -19.444,9.56 -28.339,18.455c-8.895,8.895 -14.366,17.818 -18.455,28.339c-3.955,10.177 -6.659,21.808 -7.437,38.838c-0.778,17.066 -0.962,22.515 -0.962,65.968c0,43.453 0.184,48.902 0.962,65.968c0.778,17.03 3.482,28.661 7.437,38.838c4.089,10.521 9.56,19.444 18.455,28.34c8.895,8.895 17.818,14.366 28.339,18.455c10.178,3.954 21.809,6.659 38.839,7.436c17.066,0.779 22.515,0.963 65.968,0.963c43.453,0 48.902,-0.184 65.968,-0.963c17.03,-0.777 28.661,-3.482 38.838,-7.436c10.521,-4.089 19.444,-9.56 28.34,-18.455c8.895,-8.896 14.366,-17.819 18.455,-28.34c3.954,-10.177 6.659,-21.808 7.436,-38.838c0.779,-17.066 0.963,-22.515 0.963,-65.968c0,-43.453 -0.184,-48.902 -0.963,-65.968c-0.777,-17.03 -3.482,-28.661 -7.436,-38.838c-4.089,-10.521 -9.56,-19.444 -18.455,-28.339c-8.896,-8.895 -17.819,-14.366 -28.34,-18.455c-10.177,-3.955 -21.808,-6.66 -38.838,-7.437c-17.066,-0.779 -22.515,-0.963 -65.968,-0.963Zm0,28.829c42.722,0 47.782,0.163 64.654,0.933c15.6,0.712 24.071,3.318 29.709,5.509c7.469,2.902 12.799,6.37 18.397,11.969c5.6,5.598 9.067,10.929 11.969,18.397c2.191,5.638 4.798,14.109 5.509,29.709c0.77,16.872 0.933,21.932 0.933,64.654c0,42.722 -0.163,47.782 -0.933,64.654c-0.711,15.6 -3.318,24.071 -5.509,29.709c-2.902,7.469 -6.369,12.799 -11.969,18.397c-5.598,5.6 -10.928,9.067 -18.397,11.969c-5.638,2.191 -14.109,4.798 -29.709,5.509c-16.869,0.77 -21.929,0.933 -64.654,0.933c-42.725,0 -47.784,-0.163 -64.654,-0.933c-15.6,-0.711 -24.071,-3.318 -29.709,-5.509c-7.469,-2.902 -12.799,-6.369 -18.398,-11.969c-5.599,-5.598 -9.066,-10.928 -11.968,-18.397c-2.191,-5.638 -4.798,-14.109 -5.51,-29.709c-0.77,-16.872 -0.932,-21.932 -0.932,-64.654c0,-42.722 0.162,-47.782 0.932,-64.654c0.712,-15.6 3.319,-24.071 5.51,-29.709c2.902,-7.468 6.369,-12.799 11.968,-18.397c5.599,-5.599 10.929,-9.067 18.398,-11.969c5.638,-2.191 14.109,-4.797 29.709,-5.509c16.872,-0.77 21.932,-0.933 64.654,-0.933Zm0,49.009c-45.377,0 -82.162,36.785 -82.162,82.162c0,45.377 36.785,82.162 82.162,82.162c45.377,0 82.162,-36.785 82.162,-82.162c0,-45.377 -36.785,-82.162 -82.162,-82.162Zm0,135.495c-29.455,0 -53.333,-23.878 -53.333,-53.333c0,-29.455 23.878,-53.333 53.333,-53.333c29.455,0 53.333,23.878 53.333,53.333c0,29.455 -23.878,53.333 -53.333,53.333Zm104.609,-138.741c0,10.604 -8.597,19.199 -19.201,19.199c-10.603,0 -19.199,-8.595 -19.199,-19.199c0,-10.604 8.596,-19.2 19.199,-19.2c10.604,0 19.201,8.596 19.201,19.2Z"/></svg></a>
     </div>
     </div>
-  </div>
+    </div>
+
 
 <script src="https://www.youtube.com/iframe_api"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+$('.owl-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: false,
+  center: true;
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    }
+  },
+  // navText: ["<img src='prev-button.png'>", "<img src='next-button.png'>"],
+  touchDrag: true
+})
+
+
+</script>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script src="main.js"></script>
   </body>

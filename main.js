@@ -84,9 +84,11 @@ function regularCarousel(){
   carousel.style.position = 'relative'
   carousel.style.top = ''
   carousel.style.left = ''
-  carousel.style.width = '70vw'
-  carousel.style.height = '70vh'
+  carousel.style.width = '80%'
+  carousel.style.height = 'auto'
   carousel.style.backgroundColor = ''
+  carousel.style.marginTop = '-260px'
+  carousel.style.marginBottom = '90px'
 
   const mainPage = document.querySelector('.main-front-page')
   mainPage.style.position = 'relative'
@@ -212,7 +214,7 @@ function stopScroll(page) {
  }
 
 
-
+ //owl-carousel-container
 
  //   MUSIC OWL CAROUSEL
 
@@ -268,7 +270,8 @@ function stopScroll(page) {
               items: 1 // Change to 1 item at 1000px and above
           }
       },
-      navText: ["<img src='prev-button.png'>", "<img src='next-button.png'>"]
+      navText: ["<img src='prev-button.png'>", "<img src='next-button.png'>"],
+      touchDrag: true
   });
  
  }
@@ -324,7 +327,39 @@ function stopScroll(page) {
               items: 3 
           }
       },
-      navText: ["<img src='prev-button.png'>", "<img src='next-button.png'>"]
+      navText: ["<img src='prev-button.png'>", "<img src='next-button.png'>"],
+      touchDrag: true
   });
  
+ }
+
+
+
+
+ /* MAIN VIDEO CAROUSEL FOR MOBILE */
+
+ let touchstartX = 0;
+ let touchendX = 0;
+
+ function checkDirection() {
+  if (touchendX < touchstartX)
+    document.getElementsByClassName("button-alert")[0].click();
+  if (touchendX > touchstartX)
+    document.getElementsByClassName("button-alert")[1].click();
+ }
+
+ var bb = document.getElementById("blue-bar");
+
+ bb.addEventListener("touchstart", (e) => {
+  touchstartX = e.changedTouches[0].screenX;
+ });
+
+ bb.addEventListener("touchend", (e) => {
+  touchendX = e.changedTouches[0].screenX;
+  checkDirection();
+ });
+
+
+ function mobileShowVideo(){
+  alert('this a test')
  }
