@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-color: black;
+  color: #fff;
+  line-height: 1.7;
+}
+
+.slider-container {
+  height: 80vh;
+  display: inline-flex;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+  cursor: grab;
+}
+
+.slide {
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  user-select: none;
+}
+
+.slide img {
+  max-width: 100%;
+  max-height: 70%;
+  transition: transform 0.3s ease-in-out
+}
+
+.slide h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+
+.grabbing .slide img {
+  transform: scale(0.9);
+}
+
+.main-dot-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -200px;
+}
+
+.dot-container {
+  width: 220px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+}
+
+.nav__dots {
+  display: inline-flex;
+  align-items: center;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #B3B3B3;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#dot0 {
+  background-color: black;
+}
+
+#dot1 {
+  background-color: #fff;
+}
+
+#dot1, #dot2, #dot3 {
+  height: 15px;
+  width: 15px;
+}
+
+#dot5 {
+  background-color: #333333;
+}
+
+#dot6, #dot13 {
+  background-color: black;
+}
+
+.theVideos {
+  display: none;
+}
+
+ .image-container {
+  position: relative;
+}
+
+
+.theImages {
+  width: 400px;
+  height: 300px;
+  opacity: 0.7;
+} 
+
+.play-button {
+  position: absolute;
+  width: 50px;
+  height: auto;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.video {
+  display: none;
+}
+
+.video iframe {
+  width: 100%;
+  height: auto;
+}
+
+.slide p {
+  margin-top: -90px;
+}
+
+
+
+
+
