@@ -1,5 +1,5 @@
 const slider = document.querySelector('.slider-container'),
-slides = Array.from(document.querySelectorAll('.slide'))
+slides = Array.from(document.querySelectorAll('.mobile-slide'))
 
 let isDragging = false,
   startPos = 0,
@@ -146,12 +146,12 @@ function moveTheDots(){
 }
 
 function showVideo(){
-  document.querySelector('.image-container').style.display = 'none'
+  document.querySelector('.mobile-image-container').style.display = 'none'
   document.querySelector('.video').style.display = 'block'
   console.log('play test')
 }
 
 function closeVideo(){
-  document.querySelector('.image-container').style.display = 'block'
+  document.querySelector('.mobile-image-container').style.display = 'block'
   document.querySelector('.video').style.display = 'none'
 }
