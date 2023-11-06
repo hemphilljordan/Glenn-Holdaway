@@ -189,6 +189,7 @@ svg:hover {
 
 .main-image-container {
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .main-image-container img{
@@ -410,7 +411,7 @@ h2 {
 .main-dot-container {
   display: flex;
   justify-content: center;
-  margin-top: -200px;
+  margin-top: -150px;
 }
 
 .dot-container {

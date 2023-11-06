@@ -471,6 +471,10 @@ hr {
 
 /* GALLERY */
 
+.gallery-front-page {
+  text-align: center;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1348,6 +1352,10 @@ hr {
 
   /* GALLERY */
 
+  .gallery-front-page {
+   margin-top: -150px;
+  }
+
   .gallery {
     grid-template-columns: 1fr;
     padding: 0;
@@ -1413,6 +1421,15 @@ hr {
 
   #contact-p {
     margin-top: -160px;
+  }
+
+  .contact-form input::placeholder,
+  .contact-form textarea::placeholder {
+    color: black;
+  }
+
+  #contact-button {
+    height: 70px;
   }
 }
 
