@@ -494,3 +494,4 @@ function closeVideo(){
   document.querySelector('.mobile-image-container').style.display = 'block'
   document.querySelector('.video').style.display = 'none'
 }
+
