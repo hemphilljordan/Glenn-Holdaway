@@ -495,3 +495,36 @@ function closeVideo(){
   document.querySelector('.video').style.display = 'none'
 }
 
+function showMobileVideo() {
+  const imageContainer = document.querySelectorAll('.mobile-image-container')
+  imageContainer.forEach((x) => {
+    x.style.display = 'none'
+  })
+
+  const videoContainer = document.querySelectorAll('.video')
+  videoContainer.forEach((x) => {
+    x.style.display = 'block'
+  })
+
+  const mobileCaption = document.querySelectorAll('.mobile-caption')
+  mobileCaption.forEach((x) => {
+    x.style.display = 'none'
+  })
+}
+
+function closeMobileVideo() {
+  const imageContainer = document.querySelectorAll('.mobile-image-container')
+  imageContainer.forEach((x) => {
+    x.style.display = 'block'
+  })
+
+  const videoContainer = document.querySelectorAll('.video')
+  videoContainer.forEach((x) => {
+    x.style.display = 'none'
+  })
+
+  const mobileCaption = document.querySelectorAll('.mobile-caption')
+  mobileCaption.forEach((x) => {
+    x.style.display = 'block'
+  })
+}
