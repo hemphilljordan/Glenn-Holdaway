@@ -1428,8 +1428,16 @@ hr {
     color: black;
   }
 
-  #contact-button {
+  #mobile-contact-button {
+    margin: 0;
+    padding: 0;
     height: 70px;
+    width: 100%;
+    font-family: 'Noticia Text', serif;
+    background-color:  #a3956d;
+    color: black;
+    font-style: italic;
+    cursor: pointer;
   }
 }
 

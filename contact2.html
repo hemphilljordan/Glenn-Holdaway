@@ -8,7 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noticia+Text&family=Playfair+Display&family=Source+Code+Pro&family=Yeseva+One&display=swap" rel="stylesheet">
   <link href="https://db.onlinewebfonts.com/c/643121b5d2cc9943eff9b59054cc29ba?family=DIN+Next+Rounded+LT+W01+Light" rel="stylesheet">
   <link href="https://db.onlinewebfonts.com/c/4c0277bcba75a3570694a90365e79f29?family=Droid+Serif+W01+Regular" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="styles2.css">
+  <link rel="stylesheet" type="text/css" href="contact-styles.css">
   <title>Glenn Holdaway - Official Website</title>
   
 </head>
@@ -66,8 +66,8 @@
     <form action="https://formsubmit.co/hemphillmusic@gmail.com" method="POST">
       <input type="text" name="name" placeholder="Name" required>
       <input type="email" name="email" placeholder="Email" required>
-      <textarea type="text" name="message" placeholder="Type your message here" required></textarea>
-      <button id="contact-button" type="submit">Submit</button>
+      <textarea id="mobile-textarea" type="text" name="message" placeholder="Type your message here" required></textarea>
+      <button id="contact-button" type="submit" onclick="test()">Submit</button>
     </form>
     </div>
     <div class="contact-image">
@@ -90,7 +90,7 @@
 </div>
 
 
-<div class="contact-page-mobile">
+<!-- <div class="contact-page-mobile">
   <div class="contact-heads">
   <h2>CONTACT</h2>
   <img src="contact-image.webp" id="contact-mobile">
@@ -109,13 +109,49 @@
     <input type="text" name="name" placeholder="Name" required>
     <input type="email" name="email" placeholder="Email" required>
     <textarea id="mobile-textarea" type="text" name="message" placeholder="Type your message here" required></textarea>
-    <button id="contact-button" type="submit">Submit</button>
+    <button id="contact-button" type="submit"  onclick="test()">Submit</button>
   </form>
   <p id="contact-p">I look forward to hearing from you!</p>
   </div>
 </div>
-</div>
+</div> -->
 
+
+<div class="contact-page-mobile">
+  <div class="contact-heads">
+  <h2>CONTACT</h2>
+</div>
+<div class="contact-row">
+  <div class="contact-form">
+  <form action="https://formsubmit.co/hemphillmusic@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea type="text" name="message" placeholder="Type your message here" required></textarea>
+    <button id="contact-button" type="submit" onclick="test()">Submit</button>
+  </form>
+  </div>
+
+  <!-- <div class="contact-image-mobile">
+</div> -->
+</div>
+<p>I look forward to hearing from you!</p>
+<div class="contact-mobile-bottom">
+  <h3>For Horn Arrangements, Remote Recording, Lessons, or Business Inquiries:</h3>
+  <img src="contact-image.webp" id="contact-mobile">
+  <div class="social-contact">
+    <p><a href="mailto:gholdaway@yahoo.com">gholdaway@yahoo.com</a> 
+  </div>
+</div>
+<!-- <div class="bottom-row">
+<div class="submit-left">
+  <p>I look forward to hearing from you!</p>
+</div>
+<div class="submit-center">
+  <p>Photo by: @sherryinhb</p>
+</div>
+<div class="submit-right"></div>
+</div> -->
+</div>
 
   
     <div class="social-container-footer">

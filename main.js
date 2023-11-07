@@ -124,7 +124,9 @@ function regularCarousel(){
 
 
 
-
+function test(){
+  console.log('test')
+}
 
 
 function sendEmail() {
